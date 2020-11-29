@@ -18,14 +18,14 @@ const url = isDev ? 'http://localhost:3000' : 'https://og-image.fvrests.vercel.a
 function getCss(theme: string, fontSize: string) {
     let background = `${url}/rose-pine-bg@2x.png`;
     let foreground = '#E0DEF4';
-
+    let subtle = '#BDBAD6';
+    if (theme === 'moon') {
+        background = `${url}/rose-pine-bg-moon@2x.png`;
+    }
     if (theme === 'dawn') {
         background = `${url}/rose-pine-bg-dawn@2x.png`;
-        foreground = '#000000';
-    }
-    if (theme === 'moonlit') {
-        background = 'pink';
-        foreground = '#ebbcba';
+        foreground = '#575279';
+        subtle = '#9894B2';
     }
     return `
     @font-face {
@@ -72,13 +72,19 @@ function getCss(theme: string, fontSize: string) {
         vertical-align: -0.1em;
     }
     
-    .heading {
+    .heading, .subheading {
         font-family: 'Inter', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         line-height: 1.8;
+    }
+    .heading {
         color: ${foreground};
-    }`;
+    }
+    .subheading {
+        color: ${subtle};
+    }
+    `;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
@@ -96,7 +102,9 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="spacer">
            
             <div class="spacer">
-            <div class="heading">${emojify(
+            <div class="heading">${sanitizeHtml('Rosé Pine')
+            }</div>
+            <div class="subheading">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
             </div>

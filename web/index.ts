@@ -114,8 +114,8 @@ const Toast = ({ show, message }: ToastProps) => {
 
 const themeOptions: DropdownOption[] = [
     { text: 'default', value: 'default' },
+    { text: 'moon', value: 'moon' },
     { text: 'dawn', value: 'dawn' },
-    { text: 'moonlit', value: 'moonlit' },
 ];
 
 const fileTypeOptions: DropdownOption[] = [
@@ -164,7 +164,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
         fontSize = '100px',
         theme = 'default',
         md = true,
-        text = '**Hello** World',
+        text = 'your app',
         showToast = false,
         messageToast = '',
         loading = true,
