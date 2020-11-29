@@ -13,18 +13,19 @@ const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('b
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
 // const isServer = node environment dev ? localhost : url (maybe get dynamically?)
-
+const isDev = process.env.NODE_ENV === 'development'
+const url = isDev ? 'http://localhost:3000' : 'https://og-image.fvrests.vercel.app'
 function getCss(theme: string, fontSize: string) {
-    let background = 'https://og-image.fvrests.vercel.app/rose-pine-bg@2x.png';
+    let background = `${url}/rose-pine-bg@2x.png`;
     let foreground = '#E0DEF4';
 
     if (theme === 'dawn') {
-        background = 'https://og-image.fvrests.vercel.app/rose-pine-bg-dawn@2x.png';
-        foreground = 'white';
+        background = `${url}/rose-pine-bg-dawn@2x.png`;
+        foreground = '#000000';
     }
     if (theme === 'moonlit') {
-        background = 'black';
-        foreground = 'white';
+        background = 'pink';
+        foreground = '#ebbcba';
     }
     return `
     @font-face {
@@ -50,7 +51,7 @@ function getCss(theme: string, fontSize: string) {
 
     body {
         background: #191724;
-        background: url('${background}');
+        background-image: url('${background}');
         background-position: center;
         background-size: cover;
         height: 100vh;
@@ -58,35 +59,6 @@ function getCss(theme: string, fontSize: string) {
         text-align: center;
         align-items: center;
         justify-content: center;
-    }
-
-    code {
-        color: #D400FF;
-        font-family: 'Vera';
-        white-space: pre-wrap;
-        letter-spacing: -5px;
-    }
-
-    code:before, code:after {
-        content: '\`';
-    }
-
-    .logo-wrapper {
-        display: flex;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        justify-items: center;
-    }
-
-    .logo {
-        margin: 0 75px;
-    }
-
-    .plus {
-        color: #BBB;
-        font-family: Times New Roman, Verdana;
-        font-size: 100px;
     }
 
     .spacer {
@@ -104,8 +76,8 @@ function getCss(theme: string, fontSize: string) {
         font-family: 'Inter', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
-        color: ${foreground};
         line-height: 1.8;
+        color: ${foreground};
     }`;
 }
 
@@ -133,16 +105,3 @@ export function getHtml(parsedReq: ParsedRequest) {
 </html>`;
 }
 
-// function getImage(src: string, width ='auto', height = '225') {
-//     return `<img
-//         class="logo"
-//         alt="Generated Image"
-//         src="${sanitizeHtml(src)}"
-//         width="${sanitizeHtml(width)}"
-//         height="${sanitizeHtml(height)}"
-//     />`
-// }
-
-// function getPlusSign(i: number) {
-//     return i === 0 ? '' : '<div class="plus">+</div>';
-// }

@@ -4,10 +4,7 @@ export type Theme = 'default' | 'moonlit' | 'dawn';
 export interface ParsedRequest {
     fileType: FileType;
     text: string;
-    theme: Theme;
+    theme: Theme | string;
     md: boolean;
     fontSize: string;
-    images: string[];
-    widths: string[];
-    heights: string[];
 }
