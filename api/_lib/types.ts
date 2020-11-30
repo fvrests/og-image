@@ -6,5 +6,4 @@ export interface ParsedRequest {
     text: string;
     theme: Theme | string;
     md: boolean;
-    fontSize: string;
 }

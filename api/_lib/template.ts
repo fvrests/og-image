@@ -11,11 +11,12 @@ const emojify = (text: string) => twemoji.parse(text, twOptions);
 const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
+const pier = readFileSync(`${__dirname}/../_fonts/PierSans-Bold.otf`).toString('base64');
 
 // const isServer = node environment dev ? localhost : url (maybe get dynamically?)
 const isDev = process.env.NODE_ENV === 'development'
 const url = isDev ? 'http://localhost:3000' : 'https://og-image.fvrests.vercel.app'
-function getCss(theme: string, fontSize: string) {
+function getCss(theme: string) {
     let background = `${url}/rose-pine-bg@2x.png`;
     let foreground = '#E0DEF4';
     let subtle = '#BDBAD6';
@@ -49,6 +50,13 @@ function getCss(theme: string, fontSize: string) {
         src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
       }
 
+      @font-face{
+        font-family: 'Pier Sans';
+        font-style: normal;
+        font-weight: bold;
+        src: url(data:font/opentype;base64,${pier}) format('opentype');
+    }
+
     body {
         background: #191724;
         background-image: url('${background}');
@@ -71,31 +79,34 @@ function getCss(theme: string, fontSize: string) {
         margin: 0 .05em 0 .1em;
         vertical-align: -0.1em;
     }
-    
-    .heading, .subheading {
-        font-family: 'Inter', sans-serif;
-        font-size: ${sanitizeHtml(fontSize)};
-        font-style: normal;
-        line-height: 1.8;
-    }
+
     .heading {
+        font-family: 'Pier Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 100px;
         color: ${foreground};
     }
     .subheading {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-size: 32px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
         color: ${subtle};
     }
     `;
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, md, fontSize} = parsedReq;
+    const { text, theme, md} = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
     <title>Generated Image</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        ${getCss(theme, fontSize)}
+        ${getCss(theme)}
     </style>
     <body>
         <div>
