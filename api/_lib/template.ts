@@ -1,6 +1,5 @@
 
 import { readFileSync } from 'fs';
-import marked from 'marked';
 import { sanitizeHtml } from './sanitizer';
 import { ParsedRequest } from './types';
 
@@ -99,7 +98,7 @@ function getCss(theme: string) {
 }
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, md} = parsedReq;
+    const { text, theme } = parsedReq;
     return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -116,7 +115,7 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="heading">${sanitizeHtml('Rosé Pine')
             }</div>
             <div class="subheading">${emojify(
-                md ? marked(text) : sanitizeHtml(text)
+                sanitizeHtml(text)
             )}
             </div>
         </div>

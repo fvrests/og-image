@@ -5,5 +5,4 @@ export interface ParsedRequest {
     fileType: FileType;
     text: string;
     theme: Theme | string;
-    md: boolean;
 }

@@ -123,11 +123,6 @@ const fileTypeOptions: DropdownOption[] = [
     { text: 'JPEG', value: 'jpeg' },
 ];
 
-const markdownOptions: DropdownOption[] = [
-    { text: 'Plain Text', value: '0' },
-    { text: 'Markdown', value: '1' },
-];
-
 
 interface AppState extends ParsedRequest {
     loading: boolean;
@@ -156,18 +151,15 @@ const App = (_: any, state: AppState, setState: SetState) => {
     const {
         fileType = 'png',
         theme = 'default',
-        md = true,
         text = 'your app',
         showToast = false,
         messageToast = '',
         loading = true,
         overrideUrl = null,
     } = state;
-    const mdValue = md ? '1' : '0';
     const url = new URL(window.location.origin);
     url.pathname = `${encodeURIComponent(text)}.${fileType}`;
     url.searchParams.append('theme', theme);
-    url.searchParams.append('md', mdValue);
 
     return H('div',
         { className: 'split' },
@@ -190,14 +182,6 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         options: fileTypeOptions,
                         value: fileType,
                         onchange: (val: FileType) => setLoadingState({ fileType: val })
-                    })
-                }),
-                H(Field, {
-                    label: 'Text Type',
-                    input: H(Dropdown, {
-                        options: markdownOptions,
-                        value: mdValue,
-                        onchange: (val: string) => setLoadingState({ md: val === '1' })
                     })
                 }),
                 H(Field, {
