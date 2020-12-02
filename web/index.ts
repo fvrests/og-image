@@ -1,4 +1,5 @@
-import { ParsedRequest, Theme, FileType } from '../api/_lib/types';
+// import { ParsedRequest, Theme, FileType } from '../api/_lib/types';
+import { ParsedRequest, Theme } from '../api/_lib/types';
 const { H, R, copee } = (window as any);
 let timeout = -1;
 
@@ -118,10 +119,10 @@ const themeOptions: DropdownOption[] = [
     { text: 'dawn', value: 'dawn' },
 ];
 
-const fileTypeOptions: DropdownOption[] = [
-    { text: 'PNG', value: 'png' },
-    { text: 'JPEG', value: 'jpeg' },
-];
+// const fileTypeOptions: DropdownOption[] = [
+//     { text: 'PNG', value: 'png' },
+//     { text: 'JPEG', value: 'jpeg' },
+// ];
 
 
 interface AppState extends ParsedRequest {
@@ -176,14 +177,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
                         }
                     })
                 }),
-                H(Field, {
-                    label: 'File Type',
-                    input: H(Dropdown, {
-                        options: fileTypeOptions,
-                        value: fileType,
-                        onchange: (val: FileType) => setLoadingState({ fileType: val })
-                    })
-                }),
+                // H(Field, {
+                //     label: 'File Type',
+                //     input: H(Dropdown, {
+                //         options: fileTypeOptions,
+                //         value: fileType,
+                //         onchange: (val: FileType) => setLoadingState({ fileType: val })
+                //     })
+                // }),
                 H(Field, {
                     label: 'Text Input',
                     input: H(TextInput, {
