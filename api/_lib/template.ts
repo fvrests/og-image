@@ -60,7 +60,8 @@ function getCss(theme: string) {
         background: #191724;
         background-image: url('${background}');
         background-position: center;
-        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
         height: 100vh;
         display: flex;
         text-align: center;
@@ -72,6 +73,9 @@ function getCss(theme: string) {
         margin: 150px;
     }
 
+    .spacer-small {
+        margin: 32px;
+    }
     .emoji {
         height: 1em;
         width: 1em;
@@ -110,10 +114,10 @@ export function getHtml(parsedReq: ParsedRequest) {
     <body>
         <div>
             <div class="spacer">
-           
             <div class="spacer">
             <div class="heading">${sanitizeHtml('Rosé Pine')
             }</div>
+            <div class="spacer-small">
             <div class="subheading">${emojify(
                 sanitizeHtml(text)
             )}
