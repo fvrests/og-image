@@ -21,8 +21,37 @@ footer {
   font-size: 0.8em;
 }
 
-.center,
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pier Sans', 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial',
+    sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 64px;
+}
+
+.logo::before {
+  display: inline-flex;
+  content: '';
+  width: 96px;
+  height: 96px;
+  background: url('https://github.com/rose-pine/rose-pine-theme/raw/master/assets/icon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
 h1 {
+  font-size: 32px;
+}
+
+h1,
+.center,
+.logo {
   text-align: center;
 }
 
@@ -32,6 +61,13 @@ h1 {
   width: 100%;
 }
 
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 
 .split {
   display: flex;
   justify-content: center;
@@ -46,7 +82,7 @@ h1 {
 
 .pull-right {
   min-width: 50%;
-}
+} */
 
 button {
   appearance: none;
@@ -245,8 +281,8 @@ label {
 
 .toast-inner {
   width: 420px;
-  background: black;
-  color: white;
+  background: #1f1d2e;
+  color: #e0def4;
   border: 0;
   border-radius: 5px;
   height: 60px;
@@ -275,11 +311,15 @@ img {
 .image-wrapper {
   display: block;
   cursor: pointer;
+  margin: 36px auto;
   text-decoration: none;
-  margin-bottom: 50px;
   transition: all 0.2s ease;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  -moz-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.3);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.3);
+  box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.3);
 }
 
 .image-wrapper:hover {
@@ -300,6 +340,13 @@ img {
   .field-label {
     width: 60px;
     font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-wrapper {
+    min-height: calc(vw / 2);
+    max-width: 100vw;
   }
 }
 
