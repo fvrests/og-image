@@ -198,6 +198,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 }),
             ),
         ),
+        H('div', {className: 'spinkit'}),
         H('div',
             // { className: 'pull-right' },
             H(ImagePreview, {

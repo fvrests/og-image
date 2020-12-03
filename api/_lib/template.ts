@@ -74,7 +74,7 @@ function getCss(theme: string) {
     }
 
     .spacer-small {
-        margin: 32px;
+        margin: 16px;
     }
     .emoji {
         height: 1em;
@@ -87,15 +87,15 @@ function getCss(theme: string) {
         font-family: 'Pier Sans', sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 100px;
+        font-size: 48px;
         color: ${foreground};
     }
     .subheading {
         font-family: 'Inter', sans-serif;
         font-style: normal;
-        font-size: 32px;
+        font-size: 16px;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         color: ${subtle};
     }
     `;
