@@ -378,8 +378,15 @@ img {
   }
 }
 
+.spinkit {
+  position: relative;
+}
 .spinner {
-  margin: 100px auto 0;
+  margin: 0 auto;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: calc(50% - 35px);
   width: 70px;
   text-align: center;
 }
@@ -387,7 +394,7 @@ img {
 .spinner > div {
   width: 18px;
   height: 18px;
-  background-color: #333;
+  background-color: #e0def4;
 
   border-radius: 100%;
   display: inline-block;

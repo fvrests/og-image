@@ -198,9 +198,14 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 }),
             ),
         ),
-        H('div', {className: 'spinkit'}),
+    
         H('div',
-            // { className: 'pull-right' },
+            { className: 'spinkit' },
+                H('div', { className: 'spinner' },
+                    H('div', { className: 'bounce1' }),
+                    H('div', { className: 'bounce2' }),
+                    H('div', { className: 'bounce3' }),
+                ),
             H(ImagePreview, {
                 src: overrideUrl ? overrideUrl.href : url.href,
                 loading: loading,
