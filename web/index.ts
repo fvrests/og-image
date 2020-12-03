@@ -163,9 +163,10 @@ const App = (_: any, state: AppState, setState: SetState) => {
     url.searchParams.append('theme', theme);
 
     return H('div',
-        { className: 'split' },
+        // { className: 'split' },
+        { className: 'stack' },
         H('div',
-            { className: 'pull-left' },
+            // { className: 'pull-left' },
             H('div',
                 H(Field, {
                     label: 'Theme',
@@ -186,7 +187,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 //     })
                 // }),
                 H(Field, {
-                    label: 'Text Input',
+                    label: 'App Name',
                     input: H(TextInput, {
                         value: text,
                         oninput: (val: string) => {
@@ -198,7 +199,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
             ),
         ),
         H('div',
-            { className: 'pull-right' },
+            // { className: 'pull-right' },
             H(ImagePreview, {
                 src: overrideUrl ? overrideUrl.href : url.href,
                 loading: loading,
