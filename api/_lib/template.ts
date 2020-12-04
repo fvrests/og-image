@@ -53,7 +53,7 @@ function getCss(theme: string) {
         font-family: 'Pier Sans';
         font-style: normal;
         font-weight: bold;
-        src: url(data:font/opentype;base64,${pier}) format('opentype');
+        src: url(data:font/opentype;charset=utf-8;base64,${pier})  format("opentype");
     }
 
     body {
