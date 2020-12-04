@@ -164,7 +164,7 @@ button:hover {
   display: inline-flex;
   height: 40px;
   outline: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #e0def4;
   font-size: 12px;
   text-transform: uppercase;
   user-select: none;
@@ -178,11 +178,12 @@ button:hover {
   line-height: 0;
   width: auto;
   min-width: 100%;
+  -webkit-appearance: none;
 }
 
 .select-wrapper:hover {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  border-color: #ddd;
+  border-color: #706e86;
 }
 
 .select-wrapper.small {
@@ -192,7 +193,7 @@ button:hover {
 }
 
 .select-arrow {
-  border-left: 1px solid #eaeaea;
+  border-left: 1px solid #e0def4;
   background: #edecfb;
   width: 40px;
   height: 100%;
@@ -214,13 +215,14 @@ select {
   box-shadow: none;
   background: transparent;
   background-image: none;
-  color: #000;
+  color: #191724;
   line-height: 40px;
   font-size: 14px;
   margin-right: -20px;
   width: calc(100% + 20px);
   padding: 0 0 0 16px;
   text-transform: none;
+  -webkit-appearance: none;
 }
 
 .field-flex {
