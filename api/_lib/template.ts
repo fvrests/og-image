@@ -17,15 +17,15 @@ const isDev = process.env.NODE_ENV === 'development'
 const url = isDev ? 'http://localhost:3000' : 'https://og-image.fvrests.vercel.app'
 function getCss(theme: string) {
     let background = `${url}/rose-pine-bg@2x.png`;
-    let foreground = '#E0DEF4';
-    let subtle = '#BDBAD6';
+    let foreground = '#EDECFB';
+    let subtle = '#e0def4';
     if (theme === 'moon') {
         background = `${url}/rose-pine-bg-moon@2x.png`;
     }
     if (theme === 'dawn') {
         background = `${url}/rose-pine-bg-dawn@2x.png`;
         foreground = '#575279';
-        subtle = '#9894B2';
+        subtle = '#5F5B7F';
     }
     return `
     @font-face {
@@ -57,7 +57,8 @@ function getCss(theme: string) {
     }
 
     body {
-        background: #191724;
+        padding: 0;
+        margin: 0;
         background-image: url('${background}');
         background-position: center;
         background-repeat: no-repeat;
@@ -67,6 +68,9 @@ function getCss(theme: string) {
         text-align: center;
         align-items: center;
         justify-content: center;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
     }
 
     .spacer {
@@ -74,8 +78,9 @@ function getCss(theme: string) {
     }
 
     .spacer-small {
-        margin: 16px;
+        margin: 18px;
     }
+
     .emoji {
         height: 1em;
         width: 1em;
@@ -87,16 +92,17 @@ function getCss(theme: string) {
         font-family: 'Pier Sans', sans-serif;
         font-style: normal;
         font-weight: bold;
-        font-size: 48px;
-        color: ${foreground};
+        font-size: 80px;
+        color: ${subtle};
     }
     .subheading {
         font-family: 'Inter', sans-serif;
         font-style: normal;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 24px;
         text-transform: uppercase;
-        letter-spacing: 1px;
-        color: ${subtle};
+        letter-spacing: 4px;
+        color: ${foreground};
     }
     `;
 }
