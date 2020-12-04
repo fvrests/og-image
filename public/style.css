@@ -1,5 +1,6 @@
 body {
   font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 400;
   margin: 20px;
   background-color: #191724;
   color: #e0def4;
@@ -30,7 +31,7 @@ footer {
   font-style: normal;
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
 .logo::before {
@@ -55,6 +56,12 @@ h1,
   text-align: center;
 }
 
+.center {
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -67,22 +74,6 @@ h1,
   justify-content: center;
   align-items: center;
 }
-/* 
-.split {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.pull-left {
-  min-width: 50%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.pull-right {
-  min-width: 50%;
-} */
 
 button {
   appearance: none;
@@ -128,7 +119,7 @@ button:hover {
 .input-outer-wrapper {
   align-items: center;
   border-radius: 5px;
-  border: 1px solid #e0def4;
+  border: 2px solid #e0def4;
   display: inline-flex;
   height: 37px;
   position: relative;
@@ -144,7 +135,7 @@ button:hover {
 
 .input-inner-wrapper {
   display: block;
-  margin: 4px 10px;
+  margin: 4px 16px;
   position: relative;
   width: 100%;
 }
@@ -168,8 +159,8 @@ button:hover {
 
 .select-wrapper {
   appearance: none;
-  color: #000;
-  background: #fff;
+  color: #191724;
+  background: #edecfb;
   display: inline-flex;
   height: 40px;
   outline: none;
@@ -202,7 +193,7 @@ button:hover {
 
 .select-arrow {
   border-left: 1px solid #eaeaea;
-  background: #fff;
+  background: #edecfb;
   width: 40px;
   height: 100%;
   position: absolute;
@@ -237,15 +228,19 @@ select {
   margin-top: 10px;
 }
 
+.field {
+  margin: 0 auto;
+}
+
 .field-value {
-  margin: 10px 80px;
+  margin: 10px 4px;
 }
 
 .field-label {
   display: inline-block;
   width: 100px;
-  margin-right: 20px;
-  text-align: right;
+  margin-right: 30px;
+  text-align: left;
 }
 
 .field-value {
@@ -320,7 +315,7 @@ img {
   -webkit-box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.3);
   box-shadow: 0px 0px 10px 0px rgba(1, 1, 1, 0.3);
   min-height: calc(vw / 2);
-  max-width: 100vw;
+  max-width: 90vw;
 }
 .image-wrapper:hover {
   border: none;
@@ -332,21 +327,23 @@ img {
   }
 }
 
-@media (max-width: 900px) {
-  /* .split {
-    flex-wrap: wrap;
-  } */
-
-  .field-label {
-    width: 60px;
-    font-size: 13px;
-  }
-}
-
 @media (min-width: 640px) {
   .image-wrapper {
     max-width: 640px;
     min-height: 320px;
+  }
+}
+@media (max-width: 400px) {
+  .body {
+    font-size: 12px;
+  }
+  .field {
+    max-width: 90vw;
+  }
+  .center {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
   }
 }
 
