@@ -1,10 +1,13 @@
-<img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="64" />
+<p align="center">
+  <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="90" />
+  <h2 align="center">Rosé Pine Images</h2>
+</p>
 
-# [Rosé Pine Images](https://rose-pine-images.vercel.app)
+<p align="center">Social image generator for <a href="https://github.com/rose-pine/rose-pine-theme">Rosé Pine</a></p>
 
-Social image generator for [Rosé Pine](https://github.com/rose-pine/rose-pine-theme)
-
-[![](https://img.shields.io/badge/Rosé%20Pine%20Theme-191724)](https://github.com/rose-pine/rose-pine-theme)
+<p align="center">
+  <a href="https://github.com/rose-pine/rose-pine-theme"><img alt="Rosé Pine Theme" src="https://img.shields.io/badge/Rosé%20Pine%20Theme-191724?style=flat-square" /></a>
+</p>
 
 ## What is this?
 
