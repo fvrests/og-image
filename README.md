@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="90" />
-  <h2 align="center">Rosé Pine Images</h2>
+<h2 align="center"><a href="https://rose-pine-images.vercel.app">Rosé Pine Images</a></h2>
 </p>
 
 <p align="center">Social image generator for <a href="https://github.com/rose-pine/rose-pine-theme">Rosé Pine</a></p>
