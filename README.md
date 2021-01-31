@@ -2,7 +2,7 @@
 
 # [Rosé Pine Images](https://rose-pine-images.vercel.app)
 
-Social image generator for [Rosé Pine Theme](https://github.com/rose-pine/rose-pine-theme)
+Social image generator for [Rosé Pine](https://github.com/rose-pine/rose-pine-theme)
 
 [![](https://img.shields.io/badge/Rosé%20Pine%20Theme-191724)](https://github.com/rose-pine/rose-pine-theme)
 
