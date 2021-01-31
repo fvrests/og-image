@@ -1,72 +1,35 @@
-<a href="https://vercel.com/new/project?template=vercel/og-image"><img width="128" src="https://vercel.com/button" align="right"></a>
+<img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="64" />
 
-# [Open Graph Image as a Service](https://og-image.vercel.app)
+# [Rosé Pine Images](https://rose-pine-images.vercel.app)
 
-<a href="https://twitter.com/vercel">
-    <img align="right" src="https://og-image.vercel.app/tweet.png" height="300" />
-</a>
+Social image generator for [Rosé Pine Theme](https://github.com/rose-pine/rose-pine-theme)
 
-Serverless service that generates dynamic Open Graph images that you can embed in your `<meta>` tags.
+[![](https://img.shields.io/badge/Rosé%20Pine%20Theme-191724)](https://github.com/rose-pine/rose-pine-theme)
 
-For each keystroke, headless chromium is used to render an HTML page and take a screenshot of the result which gets cached.
+## What is this?
 
-See the image embedded in the tweet for a real use case.
+This service generates dynamic promo images for your Rosé Pine repositories.
 
+To generate your image:
 
-## What is an Open Graph Image?
+- visit the [image generator](https://rose-pine-images.vercel.app)
+- choose the variant best representing your project. if your theme includes multiple variants, we suggest using the default theme template.
+- enter the project name and your promo image will be generated ✨
+- visit your repo > settings > social preview on GitHub & upload the image to set it as your repo's [social preview](https://docs.github.com/en/github/administering-a-repository/customizing-your-repositorys-social-media-preview)
+- use wherever else needed to promote your project!
 
-Have you ever posted a hyperlink to Twitter, Facebook, or Slack and seen an image popup?
-How did your social network know how to "unfurl" the URL and get an image?
-The answer is in your `<head>`.
+Forked from Vercel's [Open Graph Image as a Service](https://og-image.vercel.app).
 
-The [Open Graph protocol](http://ogp.me) says you can put a `<meta>` tag in the `<head>` of a webpage to define this image.
+## Templates
 
-It looks like the following:
+**Base**
 
-```html
-<head>
-  <title>Title</title>
-  <meta property="og:image" content="http://example.com/logo.jpg" />
-</head>
-```
+![Rosé Pine base variant social image](https://github.com/fvrests/og-image/raw/main/public/promo/base.png)
 
-## Why use this service?
+**Moon**
 
-The short answer is that it would take a long time to painstakingly design an image for every single blog post and every single documentation page. And we don't want the exact same image for every blog post because that wouldn't make the article stand out when it was shared to Twitter. 
+![Rosé Pine Moon variant social image](https://github.com/fvrests/og-image/raw/main/public/promo/moon.png)
 
-That's where `og-image.vercel.app` comes in. We can simply pass the title of our blog post to our generator service and it will generate the image for us on the fly!
+**Dawn**
 
-It looks like the following:
-
-```html
-<head>
-  <title>Hello World</title>
-  <meta property="og:image" content="https://og-image.vercel.app/Hello%20World.png" />
-</head>
-```
-
-Now try changing the text `Hello%20World` to the title of your choosing and watch the magic happen ✨
-
-## Deploy your own
-
-You'll want to fork this repository and deploy your own image generator.
-
-1. Click the fork button at the top right of GitHub
-2. Clone the repo to your local machine with `git clone URL_OF_FORKED_REPO_HERE`
-3. Change directory with `cd og-image`
-4. Make changes by swapping out images, changing colors, etc (see [contributing](https://github.com/vercel/og-image/blob/main/CONTRIBUTING.md) for more info)
-5. Hobby plan users will need to remove all configuration inside `vercel.json` besides `rewrites`
-6. Run locally with `vercel dev` and visit [localhost:3000](http://localhost:3000)  (if nothing happens, run `npm install -g vercel`)
-7. Deploy to the cloud by running `vercel` and you'll get a unique URL
-8. Setup [GitHub](https://vercel.com/github) to autodeploy on push
-
-If you are using a paid plan, you can do a one-click deploy with the button below.
-
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=vercel/og-image)
-
-Once you have an image generator that sparks joy, you can setup [automatic GitHub](https://vercel.com/github) deployments so that pushing to master will deploy to production! 🚀
-
-## Authors
-
-- Steven ([@styfle](https://twitter.com/styfle)) - [Vercel](https://vercel.com)
-- Evil Rabbit ([@evilrabbit](https://twitter.com/evilrabbit_)) - [Vercel](https://vercel.com)
+![Rosé Pine Dawn variant social image](https://github.com/fvrests/og-image/raw/main/public/promo/dawn.png)
