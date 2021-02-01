@@ -18,7 +18,8 @@ This service generates dynamic promo images for your Rosé Pine repositories.
 ## Usage
 
 - open the [generator](https://rose-pine-images.vercel.app)
-- choose the theme best representing your project. if your port includes multiple variants, we suggest using the default theme template.
+- choose the theme best representing your project's palette
+  - if your project includes multiple variants, we suggest using the default theme template
 - enter the project name and your promo image will be generated ✨
 - visit your repo > settings > social preview on GitHub & upload the image to set it as your repo's [social preview](https://docs.github.com/en/github/administering-a-repository/customizing-your-repositorys-social-media-preview)
 - use wherever else needed to promote your project!
