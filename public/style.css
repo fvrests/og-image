@@ -17,9 +17,15 @@ a:hover {
   border-bottom: 1px solid #9ccfd8;
 }
 
-footer {
+.vercel-credit {
   opacity: 0.5;
   font-size: 0.8em;
+  margin: 36px 0 100px 0;
+}
+
+footer {
+  font-size: 0.8em;
+  padding-bottom: 86px;
 }
 
 .logo {
@@ -39,7 +45,7 @@ footer {
   content: '';
   width: 96px;
   height: 96px;
-  background: url('https://github.com/rose-pine/rose-pine-theme/raw/master/assets/icon.png');
+  background: url('https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -259,13 +265,13 @@ label {
   position: fixed;
   bottom: 10px;
   right: 20px;
-  max-width: 420px;
+  max-width: 400px;
   z-index: 2000;
   transition: transform 0.4s ease;
 }
 
 .toast-outer {
-  width: 420px;
+  width: 400px;
   height: 72px;
   position: absolute;
   bottom: 0;
@@ -277,7 +283,7 @@ label {
 }
 
 .toast-inner {
-  width: 420px;
+  width: 400px;
   background: #1f1d2e;
   color: #e0def4;
   border: 0;
@@ -285,7 +291,6 @@ label {
   height: 60px;
   align-items: center;
   justify-content: space-between;
-
   box-shadow: 0 4px 9px rgba(0, 0, 0, 0.12);
   font-size: 14px;
   display: flex;
@@ -346,6 +351,11 @@ img {
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
+  }
+  .toast-area,
+  .toast-outer,
+  .toast-inner {
+    max-width: 90vw;
   }
 }
 
